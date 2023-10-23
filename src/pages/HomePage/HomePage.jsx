@@ -8,7 +8,7 @@ const HomePage = () => {
   const [questions, setQuestions] = useState(null);
 
   useEffect(() => {
-    // Load categories when the component mounts
+
     axios
       .get('https://opentdb.com/api_category.php')
       .then((response) => setCategories(response.data.trivia_categories))
@@ -25,7 +25,7 @@ const HomePage = () => {
  }
   return (
     <div>
-      <h1>Trivia Game</h1>
+      <h1>Brain Bloom</h1>
       <label>
         Select a Category:
         <select name = "category" value={formData.category} onChange={handleQuizOptions}>
