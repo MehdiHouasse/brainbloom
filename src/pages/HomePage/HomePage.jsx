@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import * as quizAPI from "../../utilities/quiz-api";
 const HomePage = () => {
+
   const [categories, setCategories] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState(9);
+  const [formData, setFormData] = useState({category: "9", difficulty: "easy"});
+  const [questions, setQuestions] = useState(null);
 
   useEffect(() => {
     // Load categories when the component mounts
@@ -13,16 +15,20 @@ const HomePage = () => {
       .catch((error) => console.error(error));
   }, []);
 
-  const handleCategoryChange = (e) => {
-    setSelectedCategory(e.target.value);
+  const handleQuizOptions = (e) => {
+  const quiz = {...formData, [e.target.name]: e.target.value}
+    setFormData(quiz);
   };
-
+ async function handleSubmit(){
+  const quiz = await quizAPI.startQuiz(formData)
+  setQuestions(quiz.results);
+ }
   return (
     <div>
       <h1>Trivia Game</h1>
       <label>
         Select a Category:
-        <select value={selectedCategory} onChange={handleCategoryChange}>
+        <select name = "category" value={formData.category} onChange={handleQuizOptions}>
           {categories.map((category) => (
             <option key={category.id} value={category.id}>
               {category.name}
@@ -30,7 +36,12 @@ const HomePage = () => {
           ))}
         </select>
       </label>
-      <button onClick={() => window.location.href = `/quiz?category=${selectedCategory}`}>
+      <select name= 'difficulty' value={formData.difficulty} onChange={handleQuizOptions}>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+      <button onClick={handleSubmit}>
         Take Quiz
       </button>
     </div>
