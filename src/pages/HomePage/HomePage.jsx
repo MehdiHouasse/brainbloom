@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import QuizPage from '../QuizPage/QuizPage';
 import * as quizAPI from '../../utilities/quiz-api';
-import 'materialize-css/dist/css/materialize.css'; // Import Materialize CSS
+import 'materialize-css/dist/css/materialize.css';
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -30,16 +30,15 @@ const HomePage = () => {
   }
 
   return (
-    <div className="container"> {/* Add Materialize CSS container class */}
-      <h1>Brain Bloom</h1>
+    <div className="container">
       <div className="row">
-        <div className="col s12"> {/* Add Materialize CSS column classes */}
+        <div className="col s12">
           <label>Select a Category:</label>
           <select
             name="category"
             value={formData.category}
             onChange={handleQuizOptions}
-            className="browser-default" // Add Materialize CSS class
+            className="browser-default"
           >
             {categories.map((category) => (
               <option key={category.id} value={category.id}>
@@ -48,22 +47,22 @@ const HomePage = () => {
             ))}
           </select>
         </div>
-        <div className="col s12"> {/* Add Materialize CSS column classes */}
+        <div className="col s12">
           <select
             name="difficulty"
             value={formData.difficulty}
             onChange={handleQuizOptions}
-            className="browser-default" // Add Materialize CSS class
+            className="browser-default"
           >
             <option value="easy">Easy</option>
             <option value="medium">Medium</option>
             <option value="hard">Hard</option>
           </select>
         </div>
-        <div className="col s12"> {/* Add Materialize CSS column classes */}
-          <button onClick={handleSubmit} className="btn waves-effect waves-light"> {/* Add Materialize CSS classes */}
+        <div className="col s12">
+          <button onClick={handleSubmit} className="btn waves-effect waves-light indigo lighten-2"> {/* Add Materialize CSS classes */}
             Take Quiz
-            <i className="material-icons right"></i> {/* Add a Materialize CSS icon */}
+            <i className="material-icons right"></i>
           </button>
         </div>
       </div>

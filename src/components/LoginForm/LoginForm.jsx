@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
 
 export default function LoginForm({ setUser }) {
   const [credentials, setCredentials] = useState({
     email: '',
-    password: ''
+    password: '',
   });
   const [error, setError] = useState('');
 
@@ -14,12 +14,8 @@ export default function LoginForm({ setUser }) {
   }
 
   async function handleSubmit(evt) {
-    // Prevent form from being submitted to the server
     evt.preventDefault();
     try {
-      // The promise returned by the signUp service method 
-      // will resolve to the user object included in the
-      // payload of the JSON Web Token (JWT)
       const user = await usersService.login(credentials);
       setUser(user);
     } catch {
@@ -28,17 +24,53 @@ export default function LoginForm({ setUser }) {
   }
 
   return (
-    <div>
-      <div className="form-container">
-        <form autoComplete="off" onSubmit={handleSubmit}>
-          <label>Email</label>
-          <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
-          <label>Password</label>
-          <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
-          <button type="submit">LOG IN</button>
-        </form>
+    <div className="container">
+      <div className="row">
+        <div className="col s12 m6 offset-m3">
+          <div className="card">
+            <div className="card-content">
+              <span className="card-title">Log In</span>
+              <form autoComplete="off" onSubmit={handleSubmit}>
+                <div className="input-field">
+                  <label htmlFor="email">Email</label>
+                  <input
+                    id="email"
+                    type="text"
+                    className="validate"
+                    name="email"
+                    value={credentials.email}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div className="input-field">
+                  <label htmlFor="password">Password</label>
+                  <input
+                    id="password"
+                    type="password"
+                    className="validate"
+                    name="password"
+                    value={credentials.password}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <button className="btn waves-effect waves-light" type="submit">
+                  LOG IN
+                </button>
+                <button className="btn waves-effect waves-light right" type="button">
+                  SIGN UP
+                </button>
+              </form>
+            </div>
+            {error && (
+              <div className="card-action red-text">
+                {error}
+              </div>
+            )}
+          </div>
+        </div>
       </div>
-      <p className="error-message">&nbsp;{error}</p>
     </div>
   );
 }
