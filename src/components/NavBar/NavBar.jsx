@@ -10,6 +10,7 @@ export default function NavBar({ user, setUser }) {
   return (
     <nav>
       <Link to="/quizs">Quizs Page</Link>
+      <Link to="/questions">Questions</Link>
       &nbsp; | &nbsp;
       &nbsp;&nbsp;
       <span>Welcome, {user.name}</span>
