@@ -8,5 +8,7 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn');
 // POST /api/users (create a user - sign up)
 router.post('/', quizCtrl.create);
 
+router.post('/save', quizCtrl.save);
+
 
 module.exports = router;

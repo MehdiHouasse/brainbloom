@@ -1,6 +1,10 @@
+
 const mongoose = require('mongoose');
-// Ensure the Category model is processed by Mongoose (for populating Menu Item queries)
-require('./category');
-const scoreSchema = require('./scoreSchema');
+const Schema = mongoose.Schema;
+
+const scoreSchema = new Schema({
+  category: String,
+  score: Number
+});
 
 module.exports = mongoose.model('Score', scoreSchema);

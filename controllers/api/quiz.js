@@ -2,6 +2,7 @@ const Quiz = require('../../models/quiz');
 
 module.exports = {
   create,
+  save,
 };
 
 
@@ -17,4 +18,10 @@ async function create(req, res) {
   } catch (err) {
     res.status(400).json(err);
   }
+}
+async function save(req, res) {
+  console.log(req.body);
+  req.body.user = req.user._id
+  const quiz = await Quiz.create(req.body)
+  res.json(quiz);
 }
