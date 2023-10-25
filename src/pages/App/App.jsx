@@ -18,7 +18,7 @@ export default function App() {
             {/* Route components in here */}
             <Route path="/" element={<HomePage />} />
             <Route path="/auth" element={<AuthPage />} />
-            <Route path="/quizs" element={<QuizPage />} />
+            <Route path="/quiz" element={<QuizPage />} />
           </Routes>
         </>
       ) : (
