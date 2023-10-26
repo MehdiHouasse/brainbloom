@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
+import logo from '../../logo.png'; // Replace with the actual path to your logo
+import './LoginForm.css'; // Import a CSS file for styling
 
 export default function LoginForm({ setUser }) {
   const [credentials, setCredentials] = useState({
@@ -29,10 +31,12 @@ export default function LoginForm({ setUser }) {
         <div className="col s12 m6 offset-m3">
           <div className="card">
             <div className="card-content">
-              <span className="card-title">Log In</span>
+              <div className="center-align">
+                <img src={logo} alt="Logo" style={{ width: '340px', height: '100px', borderRadius: '25px' }} />
+                <h4 className="center-align card-title">Log In</h4>
+              </div>
               <form autoComplete="off" onSubmit={handleSubmit}>
                 <div className="input-field">
-                  <label htmlFor="email">Email</label>
                   <input
                     id="email"
                     type="text"
@@ -42,9 +46,9 @@ export default function LoginForm({ setUser }) {
                     onChange={handleChange}
                     required
                   />
+                  <label htmlFor="email">Email</label>
                 </div>
                 <div className="input-field">
-                  <label htmlFor="password">Password</label>
                   <input
                     id="password"
                     type="password"
@@ -54,17 +58,17 @@ export default function LoginForm({ setUser }) {
                     onChange={handleChange}
                     required
                   />
+                  <label htmlFor="password">Password</label>
                 </div>
-                <button className="btn waves-effect waves-light" type="submit">
-                  LOG IN
-                </button>
-                <button className="btn waves-effect waves-light right" type="button">
-                  SIGN UP
-                </button>
+                <div className="center-align">
+                  <button className="btn waves-effect waves-light" type="submit">
+                    LOG IN
+                  </button>
+                </div>
               </form>
             </div>
             {error && (
-              <div className="card-action red-text">
+              <div className="card-action red-text center-align">
                 {error}
               </div>
             )}

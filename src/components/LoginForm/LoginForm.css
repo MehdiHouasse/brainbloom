@@ -1,0 +1,16 @@
+.card {
+  background-color: rgba(255, 255, 255, 0.3);
+  /* Adjust the opacity (0.7) as needed */
+  backdrop-filter: blur(4px);
+  /* Adjust the blur value (10px) as needed */
+  border-radius: 25px;
+}
+.card-title {
+  font-weight: bold;
+}
+
+/* Change the color of the text fields to black */
+.input-field input[type="text"],
+.input-field input[type="password"] {
+  color: black;
+}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as quizAPI from "../../utilities/quiz-api";
+import "./QuizPage.css"; // Import a CSS file for styling
 
 const QuizPage = ({ questions }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -7,6 +8,7 @@ const QuizPage = ({ questions }) => {
   const [score, setScore] = useState(0);
   const [quizCompleted, setQuizCompleted] = useState(false);
   const [answerChoices, setAnswerChoices] = useState([]);
+
   const handleAnswerSelection = (answer) => {
     if (isAnswerSelected || !questions || !questions[currentQuestionIndex]) {
       return;
@@ -20,6 +22,7 @@ const QuizPage = ({ questions }) => {
       setScore(score + 1);
     }
   };
+
   useEffect(() => {
     const a = [];
     a.push(
@@ -27,17 +30,15 @@ const QuizPage = ({ questions }) => {
       questions[currentQuestionIndex].correct_answer
     );
     const answers = a.flat();
+
     function shuffle() {
       let currentIndex = answers.length,
         randomIndex;
 
-      // While there remain elements to shuffle.
       while (currentIndex > 0) {
-        // Pick a remaining element.
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex--;
 
-        // And swap it with the current element.
         [answers[currentIndex], answers[randomIndex]] = [
           answers[randomIndex],
           answers[currentIndex],
@@ -46,6 +47,7 @@ const QuizPage = ({ questions }) => {
 
       setAnswerChoices(answers);
     }
+
     shuffle();
   }, [currentQuestionIndex]);
 
@@ -62,67 +64,48 @@ const QuizPage = ({ questions }) => {
       saveQuiz();
     }
   };
-  async function saveQuiz(){
-    console.log(questions)
+
+  async function saveQuiz() {
     const data = {
       category: questions[0].category,
       difficulty: questions[0].difficulty,
-      qScore: score
-    }
+      qScore: score,
+    };
     const quiz = await quizAPI.save(data);
     console.log(quiz);
   }
+
   return (
     <div className="container">
-      <h1 className="center-align">Quiz</h1>
+      <h1 className="center-align quiz-title">Quiz</h1>
       {!quizCompleted && questions && questions[currentQuestionIndex] ? (
         <div className="card blue-grey darken-1">
           <div className="card-content white-text">
             <h2>Question {currentQuestionIndex + 1}</h2>
-            <p>{questions[currentQuestionIndex].question}</p>
-            <ul>
-              {answerChoices.map(
-                (answer, index) => (
-                  <li key={index}>
-                    <button
-                      onClick={() => handleAnswerSelection(answer)}
-                      className={`waves-effect waves-light btn-large ${
-                        isAnswerSelected
-                          ? answer ===
-                            questions[currentQuestionIndex].correct_answer
-                            ? "green"
-                            : "red"
-                          : "blue"
-                      }`}
-                    >
-                      {answer}
-                    </button>
-                  </li>
-                )
-              )}
-              {/* <li>
-                <button
-                  onClick={() =>
-                    handleAnswerSelection(
-                      questions[currentQuestionIndex].correct_answer
-                    )
-                  }
-                  className={`waves-effect waves-light btn-large ${
-                    isAnswerSelected
-                      ? questions[currentQuestionIndex].selectedAnswer ===
-                        questions[currentQuestionIndex].correct_answer
-                        ? "green"
-                        : "red"
-                      : "blue"
-                  }`}
-                >
-                  {questions[currentQuestionIndex].correct_answer}
-                </button>
-              </li> */}
+            <p className="question-text">{questions[currentQuestionIndex].question}</p>
+            <ul className="answer-list">
+              {answerChoices.map((answer, index) => (
+                <li key={index}>
+                  <button
+                    onClick={() => handleAnswerSelection(answer)}
+                    className={`waves-effect waves-light btn-large answer-button ${
+                      isAnswerSelected
+                        ? answer === questions[currentQuestionIndex].selectedAnswer
+                          ? answer === questions[currentQuestionIndex].correct_answer
+                            ? "correct-answer"
+                            : "incorrect-answer"
+                          : "default-answer"
+                        : "default-answer"
+                    }`}
+                  >
+                    {answer}
+                  </button>
+                </li>
+              ))}
             </ul>
             <button
               onClick={handleNextQuestion}
-              className="waves-effect waves-light btn-large"
+              className="waves-effect waves-light btn-large next-button"
             >
               {currentQuestionIndex < questions.length - 1
                 ? "Next Question"
@@ -134,13 +117,11 @@ const QuizPage = ({ questions }) => {
         <div className="card blue-grey darken-1">
           <div className="card-content white-text">
             <h2>Quiz Completed!</h2>
-            <p>
-              Your Score: {score}/{questions.length}
-            </p>
+            <p>Your Score: {score}/{questions.length}</p>
           </div>
         </div>
       ) : (
-        <p className="center-align">Loading questions...</p>
+        <p className="center-align loading-text">Loading questions...</p>
       )}
     </div>
   );

@@ -19,7 +19,7 @@ export default function NavBar({ user, setUser }) {
             <Link to="/quizs">Quizs Page</Link>
           </li>
           <li>
-            <Link to="/questions">Questions</Link>
+            <Link to="/profile">Profile</Link>
           </li>
           <li>
             <span className="user-greeting">Welcome, {user.name}</span>

@@ -3,6 +3,7 @@ const Quiz = require('../../models/quiz');
 module.exports = {
   create,
   save,
+  getAll
 };
 
 
@@ -24,4 +25,8 @@ async function save(req, res) {
   req.body.user = req.user._id
   const quiz = await Quiz.create(req.body)
   res.json(quiz);
+}
+async function getAll (req, res){
+  const quizs = await Quiz.find().populate('user');
+  res.json(quizs);
 }

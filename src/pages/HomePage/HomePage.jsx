@@ -34,33 +34,40 @@ const HomePage = () => {
       <div className="row">
         <div className="col s12">
           <label>Select a Category:</label>
-          <select
-            name="category"
-            value={formData.category}
-            onChange={handleQuizOptions}
-            className="browser-default"
-          >
-            {categories.map((category) => (
-              <option key={category.id} value={category.id}>
-                {category.name}
-              </option>
-            ))}
-          </select>
+          <div className="input-field">
+            <select
+              name="category"
+              value={formData.category}
+              onChange={handleQuizOptions}
+              className="browser-default">
+              {categories.map((category) => (
+                <option
+                  key={category.id}
+                  value={category.id}
+                  className="category-option" // Add custom class for styling
+                >
+                  {category.name}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
         <div className="col s12">
           <select
             name="difficulty"
             value={formData.difficulty}
             onChange={handleQuizOptions}
-            className="browser-default"
-          >
+            className="browser-default">
             <option value="easy">Easy</option>
             <option value="medium">Medium</option>
             <option value="hard">Hard</option>
           </select>
         </div>
         <div className="col s12">
-          <button onClick={handleSubmit} className="btn waves-effect waves-light indigo lighten-2"> {/* Add Materialize CSS classes */}
+          <button
+            onClick={handleSubmit}
+            className="btn waves-effect waves-light indigo lighten-2"
+          >
             Take Quiz
             <i className="material-icons right"></i>
           </button>
