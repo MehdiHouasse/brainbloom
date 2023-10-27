@@ -6,12 +6,14 @@ import AuthPage from "../AuthPage/AuthPage";
 import NavBar from "../../components/NavBar/NavBar";
 import HomePage from "../HomePage/HomePage";
 import QuizPage from "../QuizPage/QuizPage";
+import ScoreboardPage from "../ScoreBoard/ScoreBoard";
 import ProfilePage from "../ProfilePage/ProfilePage";
 import ScoreBoard from "../../components/ScoreBoard/ScoreBoard";
 import * as quizAPI from "../../utilities/quiz-api";
 export default function App() {
   const [user, setUser] = useState(getUser());
   const [quizs, setQuizs] = useState([]);
+  const [scoreBoard, setScoreBoard] = useState([]);
 
   useEffect(() => {
     async function getAll(){
@@ -31,7 +33,7 @@ export default function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/auth" element={<AuthPage />} />
             <Route path="/quiz" element={<QuizPage />} />
-            <Route path="/scorboard" element={<ScoreBoard />} />
+            <Route path="/scoreboard" element={<ScoreboardPage ScoreBoard={scoreBoard} />} />
             <Route path="/profile" element={<ProfilePage savedQuiz={quizs} />} />
 
           </Routes>

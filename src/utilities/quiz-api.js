@@ -13,3 +13,6 @@ export async function getQuizs() {
 export async function deleteQuiz(id) {
   return sendRequest(`${BASE_URL}/${id}`, 'DELETE');
 }
+export async function scoreBoard() {
+  return sendRequest(`${BASE_URL}/scoreboard`);
+}

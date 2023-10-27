@@ -11,6 +11,7 @@ router.post('/', quizCtrl.create);
 router.post('/save', quizCtrl.save);
 router.get('/', quizCtrl.getAll);
 router.delete('/:id', quizCtrl.deleteQuiz);
+router.get('/scoreboard', quizCtrl.scoreBoard);
 
 
 module.exports = router;

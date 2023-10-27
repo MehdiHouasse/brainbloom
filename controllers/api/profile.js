@@ -1,4 +1,4 @@
-// profileCtrl.js
+
 
 async function getProfileData(req, res) {
   try {

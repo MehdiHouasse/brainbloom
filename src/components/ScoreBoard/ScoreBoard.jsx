@@ -1,26 +1,31 @@
+import React from 'react';
 
-import * as users from "../../utilities/users-api"
-
-const Scoreboard = ({ users }) => {
+const ScoreBoard = ({ scoreboard }) => {
   return (
     <div>
       <h2>Scoreboard</h2>
-      <ul>
-        {users.map((user, index) => (
-          <li key={index}>
-            <strong>{user.name}</strong>
-            <ul>
-              {user.quizzesTaken.map((quiz, quizIndex) => (
-                <li key={quizIndex}>
-                  Category: {quiz.category}, Difficulty: {quiz.difficulty}
-                </li>
-              ))}
-            </ul>
-          </li>
-        ))}
-      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Category</th>
+            <th>Difficulty</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          {scoreboard.map((entry, index) => (
+            <tr key={index}>
+              <td>{entry.user.name}</td>
+              <td>{entry.category}</td>
+              <td>{entry.difficulty}</td>
+              <td>{entry.qScore}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
 
-export default Scoreboard;
+export default ScoreBoard;

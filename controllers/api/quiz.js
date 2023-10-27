@@ -4,7 +4,8 @@ module.exports = {
   create,
   save,
   getAll,
-  deleteQuiz
+  deleteQuiz,
+  scoreBoard
 };
 
 
@@ -38,4 +39,9 @@ async function deleteQuiz(req, res) {
     { _id: req.params.id, user: req.user._id }
   );
   res.json(quiz);
+}
+
+async function scoreBoard(req, res) {
+  const scoreboard = await Quiz.find().populate('user');
+  res.json(scoreboard);
 }

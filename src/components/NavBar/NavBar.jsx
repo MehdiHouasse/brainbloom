@@ -20,8 +20,8 @@ export default function NavBar({ user, setUser }) {
         </Link>
         <ul id="nav-mobile" className="right">
           <li>
-            <Link to="/quizs" style={textStyle}>
-              Quizs Page
+            <Link to="/scoreboard" style={textStyle}>
+              ScoreBoard
             </Link>
           </li>
           <li>
