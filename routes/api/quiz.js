@@ -10,6 +10,7 @@ router.post('/', quizCtrl.create);
 
 router.post('/save', quizCtrl.save);
 router.get('/', quizCtrl.getAll);
+router.delete('/:id', quizCtrl.deleteQuiz);
 
 
 module.exports = router;

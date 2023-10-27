@@ -2,8 +2,8 @@
 
 async function getProfileData(req, res) {
   try {
-    // You can add data retrieval logic here if needed, for now, we're just rendering the page
-    const message = 'Hello, World'; // Your message
+
+    const message = 'Hello, World';
     res.render('profile', { message });
   } catch (error) {
     console.error(error);

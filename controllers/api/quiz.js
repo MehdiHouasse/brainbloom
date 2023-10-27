@@ -3,7 +3,8 @@ const Quiz = require('../../models/quiz');
 module.exports = {
   create,
   save,
-  getAll
+  getAll,
+  deleteQuiz
 };
 
 
@@ -29,4 +30,12 @@ async function save(req, res) {
 async function getAll (req, res){
   const quizs = await Quiz.find().populate('user');
   res.json(quizs);
+}
+
+async function deleteQuiz(req, res) {
+  const quiz =  await Quiz.findOneAndDelete(
+
+    { _id: req.params.id, user: req.user._id }
+  );
+  res.json(quiz);
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
-import logo from '../../logo.png'; // Replace with the actual path to your logo
-import './LoginForm.css'; // Import a CSS file for styling
+import logo from '../../logo.png';
+import './LoginForm.css';
 
 export default function LoginForm({ setUser }) {
   const [credentials, setCredentials] = useState({

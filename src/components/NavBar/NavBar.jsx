@@ -2,6 +2,10 @@ import { Link } from 'react-router-dom';
 import * as userService from '../../utilities/users-service';
 import logo from '../../logo.png';
 
+const textStyle = {
+  fontWeight: 'bold', // Make the text bold
+};
+
 export default function NavBar({ user, setUser }) {
   function handleLogOut() {
     userService.logOut();
@@ -16,16 +20,22 @@ export default function NavBar({ user, setUser }) {
         </Link>
         <ul id="nav-mobile" className="right">
           <li>
-            <Link to="/quizs">Quizs Page</Link>
+            <Link to="/quizs" style={textStyle}>
+              Quizs Page
+            </Link>
           </li>
           <li>
-            <Link to="/profile">Profile</Link>
+            <Link to="/profile" style={textStyle}>
+              Profile
+            </Link>
           </li>
           <li>
-            <span className="user-greeting">Welcome, {user.name}</span>
+            <span className="user-greeting" style={textStyle}>
+              Welcome, {user.name}
+            </span>
           </li>
           <li>
-            <Link to="/" onClick={handleLogOut}>
+            <Link to="/" onClick={handleLogOut} style={textStyle}>
               Log Out
             </Link>
           </li>

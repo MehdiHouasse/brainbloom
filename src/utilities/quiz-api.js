@@ -10,3 +10,6 @@ export async function save(data) {
 export async function getQuizs() {
   return sendRequest(BASE_URL);
 }
+export async function deleteQuiz(id) {
+  return sendRequest(`${BASE_URL}/${id}`, 'DELETE');
+}
