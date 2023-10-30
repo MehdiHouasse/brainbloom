@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+  <div id="description" align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  # BrainBloom
 
-## Available Scripts
+  ### [CLICK TO DEMO](https://brainbloom-8fe2c7952864.herokuapp.com/)
 
-In the project directory, you can run:
+  ##### Mehdi Houasse
 
-### `npm start`
+  [![LinkedIn Badge](https://img.shields.io/badge/-@profpan396-blue?style=flat&logo=Linkedin&logoColor=black)](https://www.linkedin.com/in/mehdi-houasse/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  ## :pencil: Description
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  BrainBloom is an interactive web application designed to stimulate your intellect and challenge your knowledge. With BrainBloom, users can explore a wide range of quizzes on various topics to test their expertise. Whether you're a trivia enthusiast or a learner looking for an enjoyable way to expand your knowledge, BrainBloom offers an engaging experience for all.
 
-### `npm test`
+  </div>
+ ### :camera_flash: Screenshots
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  |   Description | Screenshot |
+  |:-------------:| -----------|
+  | <h3>Home</h3> | <img
+    src="/public/SC1.png?raw=true"
+    width="700"
+  /> |
+  | <h3 align="center">Profile Page</h3> | <img
+  src="/public/SC2.png"
+  width="700"
+  /> |
 
-### `npm run build`
+  ## :computer: Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  ![MongoDB](https://img.shields.io/badge/-MongoDB-05122A?style=flat&logo=mongodb)
+  ![Express](https://img.shields.io/badge/-Express-05122A?style=flat&logo=express)
+  ![React](https://img.shields.io/badge/-React-05122A?style=flat&logo=react)
+  ![Node](https://img.shields.io/badge/-Node.js-05122A?style=flat&logo=node.js)
+  ![JWT](https://img.shields.io/badge/-JSON_Web_Tokens-05122A?style=flat&logo=jsonwebtokens)
+  ![Mongoose ODM](https://img.shields.io/badge/-Mongoose_ODM-05122A?style=flat&logo=mongodb)
+  ![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript)
+  ![HTML5](https://img.shields.io/badge/-HTML5-05122A?style=flat&logo=html5)
+  ![CSS3](https://img.shields.io/badge/-CSS-05122A?style=flat&logo=css3)
+  ![Trello](https://img.shields.io/badge/-Trello-05122A?style=flat&logo=trello)
+  ![Heroku](https://img.shields.io/badge/-Heroku-05122A?style=flat&logo=heroku)
+  ![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)
+  ![Github](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)
+  ![VSCode](https://img.shields.io/badge/-VS_Code-05122A?style=flat&logo=visualstudio)
+  ![Materialize CSS](https://img.shields.io/badge/-Materialize_CSS-05122A?style=flat&logo=materialdesign)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  ## :fire: Getting Started
 
-### `npm run eject`
+<details open>
+  <summary> Trello Board </summary>
+  <a href="https://trello.com/b/yxFQjD2P/brainbloom"
+    > https://trello.com/b/yxFQjD2P/brainbloom</a
+  >
+</details>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<details open>
+  <summary> Deployed Link (Heroku) </summary>
+  <a href="https://brainbloom-8fe2c7952864.herokuapp.com/"
+    > https://brainbloom-8fe2c7952864.herokuapp.com/ </a
+  >
+</details>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## :satellite: Upcoming Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- [:star:] Allow users to customize their profiles with avatars, bios, and themes.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [:star:] Feature a daily quiz on various topics, encouraging users to return regularly for fresh challenges.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [:star:] Include time limits for quizzes to increase the challenge.

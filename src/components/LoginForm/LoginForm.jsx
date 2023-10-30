@@ -61,7 +61,7 @@ export default function LoginForm({ setUser }) {
                   <label htmlFor="password">Password</label>
                 </div>
                 <div className="center-align">
-                  <button className="btn waves-effect waves-light" type="submit">
+                  <button className="btn waves-effect indigo lighten-2" type="submit">
                     LOG IN
                   </button>
                 </div>

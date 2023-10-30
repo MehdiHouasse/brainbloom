@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { signUp } from '../../utilities/users-service';
-import logo from '../../logo.png'; // Replace with the actual path to your logo
+import logo from '../../logo.png';
 
 export default class SignUpForm extends Component {
   state = {
@@ -36,10 +36,18 @@ export default class SignUpForm extends Component {
       <div className="container">
         <div className="row">
           <div className="col s12 m6 offset-m3">
-            <div className="card" style={{ borderRadius: '25px' }}>
+            <div className="card" style={{ borderRadius: "25px" }}>
               <div className="card-content">
                 <div className="center-align">
-                  <img src={logo} alt="Logo" style={{ width: '340px', height: '100px', borderRadius: '25px' }} />
+                  <img
+                    src={logo}
+                    alt="Logo"
+                    style={{
+                      width: "340px",
+                      height: "100px",
+                      borderRadius: "25px",
+                    }}
+                  />
                   <h4 className="center-align card-title">Sign Up</h4>
                 </div>
                 <form autoComplete="off" onSubmit={this.handleSubmit}>
@@ -88,7 +96,11 @@ export default class SignUpForm extends Component {
                     />
                   </div>
                   <div className="center-align">
-                    <button className="btn waves-effect waves-light" type="submit" disabled={disable}>
+                    <button
+                      className="btn waves-effect indigo lighten-2"
+                      type="submit"
+                      disabled={disable}
+                    >
                       SIGN UP
                     </button>
                   </div>
