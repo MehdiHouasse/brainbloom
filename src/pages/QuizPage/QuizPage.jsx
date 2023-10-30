@@ -77,12 +77,15 @@ const QuizPage = ({ questions }) => {
 
   return (
     <div className="container">
-      <h1 className="center-align quiz-title">Quiz</h1>
       {!quizCompleted && questions && questions[currentQuestionIndex] ? (
-        <div className="card indigo lighten-2"> {/* Change the card class here */}
+        <div className="card indigo lighten-2">
+          {" "}
+          {/* Change the card class here */}
           <div className="card-content white-text">
             <h2>Question {currentQuestionIndex + 1}</h2>
-            <p className="question-text">{questions[currentQuestionIndex].question}</p>
+            <p className="question-text">
+              {questions[currentQuestionIndex].question}
+            </p>
             <ul className="answer-list">
               {answerChoices.map((answer, index) => (
                 <li key={index}>
@@ -90,8 +93,10 @@ const QuizPage = ({ questions }) => {
                     onClick={() => handleAnswerSelection(answer)}
                     className={`waves-effect waves-light btn-large answer-button ${
                       isAnswerSelected
-                        ? answer === questions[currentQuestionIndex].selectedAnswer
-                          ? answer === questions[currentQuestionIndex].correct_answer
+                        ? answer ===
+                          questions[currentQuestionIndex].selectedAnswer
+                          ? answer ===
+                            questions[currentQuestionIndex].correct_answer
                             ? "correct-answer"
                             : "incorrect-answer"
                           : "default-answer"
@@ -117,7 +122,9 @@ const QuizPage = ({ questions }) => {
         <div className="card blue-grey darken-1">
           <div className="card-content white-text">
             <h2>Quiz Completed!</h2>
-            <p>Your Score: {score}/{questions.length}</p>
+            <p>
+              Your Score: {score}/{questions.length}
+            </p>
           </div>
         </div>
       ) : (

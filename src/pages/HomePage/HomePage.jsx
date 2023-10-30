@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 //import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import QuizPage from "../QuizPage/QuizPage";
+import "./HomePage.css";
 import * as quizAPI from "../../utilities/quiz-api";
 import "materialize-css/dist/css/materialize.css";
 
@@ -36,12 +37,14 @@ const HomePage = () => {
     <div className="container">
       <div className="row">
         <div className="col s12">
-          <div className="center-align">
-            <h2>Hello,</h2>
-            <h6>
-              Get ready to embark on an exciting quiz adventure. Choose a
-              category below and prove your knowledge.
-            </h6>
+          <div className="blurred-card">
+            <div className="center-align">
+              <h2>Hello,</h2>
+              <h6>
+                Get ready to embark on an exciting quiz adventure. Choose a
+                category below and prove your knowledge.
+              </h6>
+            </div>
           </div>
 
           <div className="input-field">

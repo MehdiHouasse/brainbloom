@@ -4,3 +4,33 @@
   background-color: #f1f1f1;
   /* Change the background color on hover */
 }
+/* Add styles for the blurred card */
+
+.blurred-card {
+  background: rgba(255, 255, 255, 0.5);
+  /* Blurry background */
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Box shadow for depth */
+  width: 60%;
+  /* Set the card width to 60% of the container */
+  margin: 0 auto;
+  /* Center the card horizontally */
+}
+.blurred-card-content {
+  background: rgba(255, 255, 255, 0.7);
+  /* Slightly transparent background */
+  border-radius: 15px;
+  /* Rounded corners */
+  padding: 20px;
+  /* Padding for the content */
+  text-align: center;
+  /* Center align text */
+  color: #333;
+  /* Text color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Box shadow for depth */
+  margin: 20px;
+  /* Optional margin to separate cards */
+}

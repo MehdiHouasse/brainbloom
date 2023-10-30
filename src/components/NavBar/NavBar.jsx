@@ -16,7 +16,7 @@ export default function NavBar({ user, setUser }) {
     <nav className="indigo lighten-2">
       <div className="nav-wrapper">
         <Link to="/" className="brand-logo left">
-         <img src={logo} alt="Brain Bloom Logo" style={{ height: '63px', marginLeft: -1067 }} />
+         <img src={logo} alt="Brain Bloom Logo" style={{ height: '63px', marginLeft: -1067, borderRadius: 25 }} />
         </Link>
         <ul id="nav-mobile" className="right">
           <li>

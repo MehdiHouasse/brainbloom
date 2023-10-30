@@ -10,7 +10,13 @@
 }
 
 
-.input-field input[type="text"],
-.input-field input[type="password"] {
-  color: black;
+/* Style placeholder text in input fields */
+.input-field input[type="text"]::placeholder,
+.input-field input[type="password"]::placeholder {
+  color: #666;
+  /* Set the placeholder text color to a light gray */
+  font-weight: normal;
+  /* Reset font weight if it's bold */
+  opacity: 0.7;
+  /* Adjust the placeholder opacity */
 }
