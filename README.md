@@ -3,7 +3,7 @@
   # BrainBloom
   ##### Mehdi Houasse
 
-  ### [CLICK TO DEMO](https://brainbloom-8fe2c7952864.herokuapp.com/)
+  ##### [CLICK TO DEMO](https://brainbloom-8fe2c7952864.herokuapp.com/)
 
 
   ## :pencil: Description
