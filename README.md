@@ -6,8 +6,6 @@
 
   ##### Mehdi Houasse
 
-![image]({https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white(https://www.linkedin.com/in/mehdi-houasse/)})
-
   ## :pencil: Description
 
   BrainBloom is an interactive web application designed to stimulate your intellect and challenge your knowledge. With BrainBloom, users can explore a wide range of quizzes on various topics to test their expertise. Whether you're a trivia enthusiast or a learner looking for an enjoyable way to expand your knowledge, BrainBloom offers an engaging experience for all.
