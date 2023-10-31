@@ -6,7 +6,7 @@
 
   ##### Mehdi Houasse
 
-  [![LinkedIn Badge](https://img.shields.io/badge/-@profpan396-blue?style=flat&logo=Linkedin&logoColor=black)](https://www.linkedin.com/in/mehdi-houasse/)
+  [![LinkedIn Badge](https://img.shields.io/badge/-@mehdi-houasse-blue?style=flat&logo=Linkedin&logoColor=black)](https://www.linkedin.com/in/mehdi-houasse/)
 
   ## :pencil: Description
 
@@ -14,15 +14,12 @@
 
   </div>
  ### :camera_flash: Screenshots
-
-  |   Description | Screenshot |
-  |:-------------:| -----------|
   | <h3>Home</h3> | <img
     src="/public/SC1.png?raw=true"
     width="700"
   /> |
-  | <h3 align="center">Profile Page</h3> | <img
-  src="/public/SC2.png"
+  | <h3>Profile Page</h3> | <img
+  src="/public/SC2.png?raw=true"
   width="700"
   /> |
 

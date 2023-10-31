@@ -93,14 +93,22 @@ const QuizPage = ({ questions }) => {
                     onClick={() => handleAnswerSelection(answer)}
                     className={`waves-effect waves-light btn-large answer-button ${
                       isAnswerSelected
-                        ? answer ===
-                          questions[currentQuestionIndex].selectedAnswer
+                        //  ? answer ===
+                        //    questions[currentQuestionIndex].selectedAnswer
                           ? answer ===
                             questions[currentQuestionIndex].correct_answer
                             ? "correct-answer"
                             : "incorrect-answer"
-                          : "default-answer"
+                          // ? "incorrect_answer"
                         : "default-answer"
+                        // ? answer === questions[currentQuestionIndex].selectedAnswer  && answer === questions[currentQuestionIndex].correct_answer
+                        // ? "correct-answer"
+                        // ? answer === answer === questions[currentQuestionIndex].selectedAnswer  && answer === questions[currentQuestionIndex].incorrect_answer
+                        // ? "incorrect-answer"
+                        // : "default-answer"
+
+
+
                     }`}
                   >
                     {answer}
