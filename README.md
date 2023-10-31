@@ -10,7 +10,7 @@
 
   BrainBloom is an interactive web application designed to stimulate your intellect and challenge your knowledge. With BrainBloom, users can explore a wide range of quizzes on various topics to test their expertise. Whether you're a trivia enthusiast or a learner looking for an enjoyable way to expand your knowledge, BrainBloom offers an engaging experience for all.
 
- ### :camera_flash: Screenshots
+  ## :camera_flash: Screenshots
   </div>
    <h3>Home</h3>  <img
     src="/public/SC1.png?raw=true"
