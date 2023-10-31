@@ -14,14 +14,14 @@
 
   </div>
  ### :camera_flash: Screenshots
-  | <h3>Home</h3> | <img
+   <h3>Home</h3>  <img
     src="/public/SC1.png?raw=true"
     width="700"
-  /> |
-  | <h3>Profile Page</h3> | <img
+  />
+   <h3>Profile Page</h3>  <img
   src="/public/SC2.png?raw=true"
   width="700"
-  /> |
+  />
 
   ## :computer: Technologies Used
 
